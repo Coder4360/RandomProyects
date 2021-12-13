@@ -1,0 +1,2 @@
+This is a proyect to make random stuff with bookmarks like a calculator
+I got the idea from https://www.youtube.com/watch?v=50mF-1YB1hg
