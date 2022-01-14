@@ -19,7 +19,8 @@ for i in range(10):
                 folder4 = Folder(str(i3 * 10))
                 for i4 in range(10):
                     folder5 = Folder(str(i3 * 10 + i4))
-                    folder5.add(Bookmark(eval(str(i * 10 + i2) + operator + str(i3 * 10 + i4)) if i3 + i4 > 0 else "NaN", "chrome://newtab"))
+                    try: folder5.add(Bookmark(eval("%d %s %d" % (i * 10 + i2, operator, i3 * 10 + i4)), "chrome://new-tab-page"))
+                    except: folder5.add(Bookmark("NaN", "chrome://new-tab-page"))
                     folder4.add(folder5)
                 folder3.add(folder4)
             folder2.add(folder3)
